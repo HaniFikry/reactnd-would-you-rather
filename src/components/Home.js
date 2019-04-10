@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Questions from "./Questions";
-import { Switch, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import QuestionDetails from "./QuestionDetails";
 import NewQuestion from "./NewQuestion";
 import Leaderboard from "./Leaderboard";

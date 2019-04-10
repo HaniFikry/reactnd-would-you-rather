@@ -7,7 +7,7 @@ export class Leaderboard extends Component {
       <div className="leaderboard">
         {this.props.users.map(u => {
           return (
-            <div className="leaderboard-row">
+            <div key={u.id} className="leaderboard-row">
               <img
                 className="user-card__avatar small-avatar"
                 src={u.avatarURL}

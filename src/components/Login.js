@@ -9,10 +9,12 @@ export class Login extends Component {
     this.props.dispatch(handleGetUsers());
   }
   render() {
-    if (this.props.authedUser) {
-      return <Redirect to="/questions" />;
+    let previousUrl = this.props.location.state && this.props.location.state.previousPath
+    if (this.props.authedUser && previousUrl) {
+      return <Redirect to={previousUrl} />
+    } else if (this.props.authedUser) {
+      return <Redirect to="/questions" />
     }
-
     return (
       <div className="login-container">
         <h1> Select User</h1>
